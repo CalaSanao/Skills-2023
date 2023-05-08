@@ -17,7 +17,8 @@ class ImageFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'url' => fake()->imageUrl(1280, 720),
+            'name' => fake()->name()
         ];
     }
 }

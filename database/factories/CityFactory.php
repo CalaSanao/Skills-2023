@@ -17,7 +17,8 @@ class CityFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->city(),
+            'island_id' => fake()->numberBetween(1,3),
         ];
     }
 }

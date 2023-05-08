@@ -17,7 +17,8 @@ class SpaceModalityFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'space_id' => fake()->numberBetween(1,10),
+            'modality_id' => fake()->numberBetween(1,10)
         ];
     }
 }

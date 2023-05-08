@@ -17,7 +17,9 @@ class KeywordFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name_es' => fake()->word(),
+            'name_cat' => fake()->word(),
+            'name_en' => fake()->word()
         ];
     }
 }

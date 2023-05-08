@@ -21,6 +21,7 @@ return new class extends Migration
             $table->boolean('is_incription_needed');
             $table->foreignId('user_id')->on('users')->constrained();
             $table->foreignId('space_id')->on('spaces')->constrained();
+            $table->foreignId('interest_point_id')->on('interest_points')->constrained();
             $table->timestamps();
         });
     }

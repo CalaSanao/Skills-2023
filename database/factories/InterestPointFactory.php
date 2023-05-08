@@ -17,7 +17,14 @@ class InterestPointFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'title' => fake()->name(),
+            'description_es' => fake()->text(),
+            'description_cat' => fake()->text(),
+            'description_en' => fake()->text(),
+            'audio_es' => fake()->url(),
+            'audio_cat' => fake()->url(),
+            'audio_en' => fake()->url(),
+            'image_id' => fake()->numberBetween(1,10)
         ];
     }
 }

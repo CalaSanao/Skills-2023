@@ -17,7 +17,8 @@ class ArchitectFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->name(),
+            'space_id' => fake()->numberBetween(1,10)
         ];
     }
 }

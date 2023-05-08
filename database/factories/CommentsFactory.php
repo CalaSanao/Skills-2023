@@ -17,7 +17,11 @@ class CommentsFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'message' => fake()->text(),
+            'valoration' => fake()->numberBetween(1,5),
+            'is_validated' => fake()->boolean(),
+            'user_id' => fake()->numberBetween(1,10),
+            'space_id' => fake()->numberBetween(1,10),
         ];
     }
 }

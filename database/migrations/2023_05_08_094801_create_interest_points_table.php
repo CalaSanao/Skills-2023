@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('audio_es')->nullable();
             $table->string('audio_cat')->nullable();
             $table->string('audio_en')->nullable();
-            $table->foreignId('interest_point_id')->on('interest_points')->constrained();
             $table->foreignId('image_id')->on('images')->constrained();
             $table->timestamps();
         });
