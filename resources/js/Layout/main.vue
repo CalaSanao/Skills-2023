@@ -30,6 +30,11 @@ const currentUser = computed(() => page.props.auth)
                             Espacios
                         </Link>
                     </li>
+                    <li class="nav-item">
+                        <Link  class="nav-link" :class="page.component == 'AdminMessage' ? 'active' : ''" href="/admin-message">
+                            Contacto
+                        </Link>
+                    </li>
                     <li class="nav-item" v-if="currentUser">
                         <Link class="nav-link" :class="page.component == 'backend/Profile' ? 'active' : ''" href="/backend/profile">
                             Perfil
@@ -49,7 +54,7 @@ const currentUser = computed(() => page.props.auth)
                         <select class="form-select form-select-lg" name="" id="">
                             <option value="cat">Catalán</option>
                             <option value="es" selected>Castellano</option>
-                            <option value="en">Ingles</option>
+                            <option value="en">Inglés</option>
                         </select>
                     </div>
                     <template v-if="currentUser">
@@ -81,6 +86,9 @@ const currentUser = computed(() => page.props.auth)
             </li>
             <li class="nav-item">
                 <Link class="nav-link px-2 text-body-secondary" href="/spaces">Espacios</Link>
+            </li>
+            <li class="nav-item">
+                <Link class="nav-link px-2 text-body-secondary" href="/admin-message">Contacto</Link>
             </li>
             <template v-if="currentUser">
                 <Link class="nav-link px-2 text-body-secondary" href="/backend/profile">Perfil</Link>

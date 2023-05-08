@@ -33,6 +33,9 @@ Route::get('/spaces/{id}', function ($id) {
     return inertia('SpaceDetails', ['space' => $space]);
 });
 
+Route::get('/admin-message', function () {
+    return inertia('AdminMessage');
+});
 
 
 
