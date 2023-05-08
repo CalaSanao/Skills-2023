@@ -27,4 +27,9 @@ class Space extends Model
     {
         return $this->hasMany(Comments::class, 'space_id');
     }
+
+    public function visits(): HasMany
+    {
+        return $this->hasMany(Visit::class, 'space_id');
+    }
 }
