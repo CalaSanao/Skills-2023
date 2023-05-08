@@ -22,12 +22,12 @@ const currentUser = computed(() => page.props.auth)
                 <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                     <li class="nav-item">
                         <Link class="nav-link" :class="page.component == 'Index' ? 'active' : ''" href="/">
-                            Inici
+                            Inicio
                         </Link>
                     </li>
                     <li class="nav-item">
                         <Link  class="nav-link" :class="page.component == 'SpaceList' ? 'active' : ''" href="/spaces">
-                            Espais
+                            Espacios
                         </Link>
                     </li>
                     <!-- <li class="nav-item dropdown">

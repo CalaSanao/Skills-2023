@@ -12,11 +12,10 @@ defineProps({
     <section class="p-5 mt-4 bg-light rounded-3">
         <div class="container-fluid py-5">
             <h1 class="display-5 fw-bold">ADart</h1>
-            <p class="fs-4">portal web multilingüe (català, castellà i anglès) per a la promoció
-                cultural del patrimoni arquitectònic balear, amb l’objectiu de donar a conèixer els
-                edificis més representatius, moviments arquitectònics i arquitectes més
-                rellevants a les Illes Balears.</p>
-            <button class="btn btn-primary btn-lg" type="button">Example button</button>
+            <p class="fs-4">Portal web multilingue (catalán, castellano y inglés) para la promoción
+                cultural del patrimonio arquitectonico balear, con el objetivo de dar a conocer los
+                edificios mas representativos, movimientos arquitectonicos y arquitectos mas
+                relevantes de las Islas Baleares.</p>
         </div>
     </section>
     <h1 class="my-5">Espais destacats</h1>
@@ -40,9 +39,9 @@ defineProps({
                     <div class="card-body">
                         <h3 class="card-title">{{ space.name }}</h3>
                         <p class="card-text">{{ space.images[0].name }}</p>
-                        <!-- <Link :href="space.url">
+                        <Link :href="`/spaces/${space.id}`">
                             <button type="button" class="btn btn-primary">Ver</button>
-                        </Link> -->
+                        </Link>
                     </div>
                 </div>
             </div>

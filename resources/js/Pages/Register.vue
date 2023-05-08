@@ -7,6 +7,10 @@ const form = useForm({
     email: null,
     password: null,
 })
+
+const submit = () => {
+    form.post('/register')
+}
 </script>
 
 <template>
@@ -16,8 +20,22 @@ const form = useForm({
                     <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                         <div class="card shadow-2-strong" style="border-radius: 1rem;">
                             <div class="card-body p-5">
-                                <h3 class="mb-5">Login</h3>
+                                <h3 class="mb-5">Registrarse</h3>
                                 <form @submit.prevent="submit">
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="typeNameX-2">Nombre y apellidos</label>
+                                        <input v-model="form.name" type="text" id="typeNameX-2"
+                                            class="form-control form-control-lg" required />
+                                        <span style="color: red;">{{ form.errors.name }}</span>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="typeDniX-2">DNI</label>
+                                        <input v-model="form.dni" type="text" id="typeDniX-2"
+                                            class="form-control form-control-lg" required />
+                                        <span style="color: red;">{{ form.errors.dni }}</span>
+                                    </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="typeEmailX-2">Email</label>
@@ -27,7 +45,7 @@ const form = useForm({
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="typePasswordX-2">Password</label>
+                                        <label class="form-label" for="typePasswordX-2">Contraseña</label>
                                         <input v-model="form.password" type="password" id="typePasswordX-2"
                                             class="form-control form-control-lg" required/>
                                         <span style="color: red;">{{ form.errors.password }}</span>
@@ -35,7 +53,7 @@ const form = useForm({
                                     </div>
 
                                     <button class="btn btn-primary btn-lg btn-block" type="submit"
-                                        :disabled="form.processing">Login</button>
+                                        :disabled="form.processing">Registrar</button>
                                 </form>
                             </div>
                         </div>

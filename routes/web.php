@@ -2,6 +2,7 @@
 
 use App\Models\Comments;
 use App\Models\Space;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -77,4 +78,32 @@ Route::post('/login', function (Request $request) {
 
 Route::post('/logout', function () {
     Auth::logout();
+});
+
+
+//Register
+Route::get('/register', function() {
+    return inertia('Register');
+});
+
+Route::post('/register', function (Request $request) {
+    $user = $request->validate([
+        'name' => ['required', 'string'],
+        'email' => ['required', 'email'],
+        'password' => ['required', 'min:3', 'max:20', 'string'],
+        'dni' => ['required', 'regex:/[0-9]{8}[A-Z]/'],
+    ]);
+
+    $newUser = new User();
+    $newUser->name = $user['name'];
+    $newUser->email = $user['email'];
+    $newUser->password = bcrypt($user['password']);
+    $newUser->is_admin = 0;
+    $newUser->dni = $user['dni'];
+
+    if ($newUser->save()) {
+        return redirect()->intended('/');
+    }
+
+
 });
