@@ -18,7 +18,8 @@ class ImageFactory extends Factory
     {
         return [
             'url' => fake()->imageUrl(1280, 720),
-            'name' => fake()->name()
+            'name' => fake()->name(),
+            'space_id' => fake()->numberBetween(1,10)
         ];
     }
 }
