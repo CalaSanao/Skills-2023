@@ -23,5 +23,6 @@ createInertiaApp({
     progress: {
         color: 'blue',
         showSpinner: true,
-    }
+    },
+    title: title => 'Mi app'
 })

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09, custom)"
+   sodipodi:docname="positiu"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.99276681"
+     inkscape:cx="196.92439"
+     inkscape:cy="551.48902"
+     inkscape:window-width="1920"
+     inkscape:window-height="966"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="289.07531"
+       y="737.02636"
+       width="294.4698"
+       height="151.85622"
+       id="rect1740" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect111"
+       style="fill:#000000;stroke-width:0.219652;stroke-dasharray:none"
+       d="m 117.0318,113.25248 a 23.441521,23.441521 0 0 0 -21.097939,13.22917 h 31.319019 v 31.3061 a 23.441521,23.441521 0 0 0 13.22038,-21.09381 23.441521,23.441521 0 0 0 -23.44146,-23.44146 z m 10.22108,44.53527 a 23.441521,23.441521 0 0 1 -10.22108,2.34817 23.441521,23.441521 0 0 1 -23.441466,-23.44198 23.441521,23.441521 0 0 1 2.343527,-10.21229 H 75.938699 v 51.31366 h 51.314181 z" />
+    <rect
+       style="fill:#000000;stroke-width:0.264999;stroke-dasharray:none"
+       id="rect1684"
+       width="82.330048"
+       height="0.67877036"
+       x="63.598282"
+       y="186.03616" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-0.55696643,-5.2281974)"
+       id="text1738"
+       style="font-size:64px;white-space:pre;shape-inside:url(#rect1740);fill:#000000;stroke-width:1.00157;stroke-dasharray:none"><tspan
+         x="289.07617"
+         y="793.65234"
+         id="tspan1829"><tspan
+   style="font-weight:bold"
+   id="tspan1827">AD</tspan>art</tspan></text>
+  </g>
+</svg>

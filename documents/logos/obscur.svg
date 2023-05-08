@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="obscur.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.99276681"
+     inkscape:cx="310.24405"
+     inkscape:cy="596.81689"
+     inkscape:window-width="1920"
+     inkscape:window-height="966"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="289.07531"
+       y="737.02636"
+       width="294.4698"
+       height="151.85622"
+       id="rect1740" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#7d2228;fill-opacity:1;stroke-width:0.287095;stroke-dasharray:none"
+       id="rect3796"
+       width="123.8683"
+       height="128.0419"
+       x="48.350937"
+       y="101.51052" />
+    <path
+       style="fill:#000000;stroke-width:0.219652;stroke-dasharray:none"
+       d="m 127.25288,157.78775 a 23.441521,23.441521 0 0 1 -10.22108,2.34817 23.441521,23.441521 0 0 1 -23.441466,-23.44198 23.441521,23.441521 0 0 1 2.343527,-10.21229 H 75.938699 v 51.31366 h 51.314181 z"
+       id="path3742" />
+    <path
+       style="fill:#b01e2e;stroke-width:0.219652;stroke-dasharray:none;fill-opacity:1"
+       d="m 117.0318,113.25248 a 23.441521,23.441521 0 0 0 -21.097939,13.22917 h 31.319019 v 31.3061 a 23.441521,23.441521 0 0 0 13.22038,-21.09381 23.441521,23.441521 0 0 0 -23.44146,-23.44146 z"
+       id="rect111" />
+    <rect
+       style="fill:#000000;stroke-width:0.264999;stroke-dasharray:none"
+       id="rect1684"
+       width="82.330048"
+       height="0.67877036"
+       x="63.598282"
+       y="184.66405" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-0.55696643,-5.2281974)"
+       id="text1738"
+       style="font-size:74.6667px;white-space:pre;shape-inside:url(#rect1740);fill:#000000;stroke-width:1.00157;stroke-dasharray:none"><tspan
+         x="289.07617"
+         y="803.08988"
+         id="tspan23697"><tspan
+   style="font-weight:bold"
+   id="tspan23695">AD</tspan>art</tspan></text>
+    <rect
+       style="fill:#7c2128;fill-opacity:1;stroke-width:0.264999;stroke-dasharray:none"
+       id="rect4060"
+       width="4.4182534"
+       height="0.53510422"
+       x="57.053146"
+       y="193.30069" />
+  </g>
+</svg>
