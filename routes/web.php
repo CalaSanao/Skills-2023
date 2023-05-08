@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    $spaces = Space::whereHas('images')->with('images')->get();
+    $spaces = Space::whereHas('images')->with('images')->where('is_featured', true)->get();
     return inertia('Index', ['spaces' => $spaces]);
 });
 
@@ -48,8 +48,6 @@ Route::post('/comment', function (Request $request) {
 
     Comments::create($comment);
 });
-
-
 
 
 
@@ -106,4 +104,12 @@ Route::post('/register', function (Request $request) {
     }
 
 
+});
+
+
+//Backend
+Route::middleware('auth')->group(function() {
+    Route::get('/backend/profile', function() {
+        return inertia('backend/Profile', ['user' => User::with(['comments' => ['space:id,name']])->find(auth()->user()->id)]);
+    });
 });

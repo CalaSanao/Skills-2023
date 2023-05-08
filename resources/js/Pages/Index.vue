@@ -15,7 +15,7 @@ const page = usePage()
     <section class="p-5 mt-4 bg-light rounded-3">
         <div class="container-fluid py-5">
             <h1 class="display-5 fw-bold">ADart</h1>
-            <p class="fs-4">Portal web multilingüe (catalán, castellano y inglés) para la promoción
+            <p class="fs-4">Portal web multilingue (catalán, castellano y inglés) para la promoción
                 cultural del patrimonio arquitectonico balear, con el objetivo de dar a conocer los
                 edificios mas representativos, movimientos arquitectonicos y arquitectos mas
                 relevantes de las Islas Baleares.</p>

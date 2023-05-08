@@ -30,6 +30,11 @@ const currentUser = computed(() => page.props.auth)
                             Espacios
                         </Link>
                     </li>
+                    <li class="nav-item" v-if="currentUser">
+                        <Link class="nav-link" :class="page.component == 'backend/Profile' ? 'active' : ''" href="/backend/profile">
+                            Perfil
+                        </Link>
+                    </li>
                     <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -39,9 +44,16 @@ const currentUser = computed(() => page.props.auth)
                         </div>
                     </li> -->
                 </ul>
-                <form class="d-flex my-2 my-lg-0">
+                <form class="d-flex justify-content-between my-2 my-lg-0">
+                    <div>
+                        <select class="form-select form-select-lg" name="" id="">
+                            <option value="cat">Catalán</option>
+                            <option value="es" selected>Castellano</option>
+                            <option value="en">Ingles</option>
+                        </select>
+                    </div>
                     <template v-if="currentUser">
-                        <p class="pr-2">{{ currentUser.user }}</p>
+                        <p class="my-2 mr-5">{{ currentUser.user }}</p>
                         <Link href='/logout' method="post" class="btn btn-outline-primary my-2 my-sm-0" as="button">
                             Logout
                         </Link>
@@ -64,12 +76,16 @@ const currentUser = computed(() => page.props.auth)
 
     <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+            <li class="nav-item">
+                <Link class="nav-link px-2 text-body-secondary" href="/">Inicio</Link>
+            </li>
+            <li class="nav-item">
+                <Link class="nav-link px-2 text-body-secondary" href="/spaces">Espacios</Link>
+            </li>
+            <template v-if="currentUser">
+                <Link class="nav-link px-2 text-body-secondary" href="/backend/profile">Perfil</Link>
+            </template>
         </ul>
-        <p class="text-center text-body-secondary">© 2023 Company, Inc</p>
+        <p class="text-center text-body-secondary">© 2023 ADart, Inc</p>
     </footer>
 </template>
