@@ -21,7 +21,7 @@ createInertiaApp({
             .mount(el)
     },
     progress: {
-        color: 'blue',
+        color: 'red',
         showSpinner: true,
     },
     title: title => 'Mi app'
