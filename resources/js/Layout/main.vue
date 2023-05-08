@@ -1,11 +1,17 @@
 <script setup>
+import { usePage, Link } from '@inertiajs/vue3';
+import { computed } from 'vue';
+
+const page = usePage()
+
+const currentUser = computed(() => page.props.auth)
 </script>
 
 <template>
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="../Img/logo.png" class="img" alt="" width="70">
+                <img src="../Img/logo.png" class="img" alt="logo" width="70">
             </a>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
@@ -15,24 +21,39 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#" aria-current="page">Home <span
-                                class="visually-hidden">(current)</span></a>
+                        <Link class="nav-link" :class="page.component == 'Index' ? 'active' : ''" href="/">
+                            Inici
+                        </Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <Link  class="nav-link" :class="page.component == 'SpaceList' ? 'active' : ''" href="/spaces">
+                            Espais
+                        </Link>
                     </li>
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">Dropdown</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="#">Action 1</a>
                             <a class="dropdown-item" href="#">Action 2</a>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
                 <form class="d-flex my-2 my-lg-0">
-                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Sign-in</button>
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log-in</button>
+                    <template v-if="currentUser">
+                        <p class="pr-2">{{ currentUser.user }}</p>
+                        <Link href='/logout' method="post" class="btn btn-outline-primary my-2 my-sm-0" as="button">
+                            Logout
+                        </Link>
+                    </template>
+                    <template v-else>
+                        <Link href='/logout' method="post" class="btn btn-outline-primary my-2 my-sm-0" as="button">
+                            Sign-in
+                        </Link>
+                        <Link href='/login' class="btn btn-outline-success my-2 my-sm-0" as="button">
+                            Log-in
+                        </Link>
+                    </template>
                 </form>
             </div>
         </div>

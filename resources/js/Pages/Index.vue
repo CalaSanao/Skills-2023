@@ -1,6 +1,7 @@
 <script setup>
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
+import { Link } from "@inertiajs/vue3"
 defineProps({
     spaces: Array
 })
@@ -39,9 +40,9 @@ defineProps({
                     <div class="card-body">
                         <h3 class="card-title">{{ space.name }}</h3>
                         <p class="card-text">{{ space.images[0].name }}</p>
-                        <Link :href="space.url">
+                        <!-- <Link :href="space.url">
                             <button type="button" class="btn btn-primary">Ver</button>
-                        </Link>
+                        </Link> -->
                     </div>
                 </div>
             </div>
