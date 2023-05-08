@@ -40,7 +40,7 @@ Route::get('/spaces/{id}', function ($id) {
 Route::post('/comment', function (Request $request) {
     $comment = $request->validate([
         'valoration' => ['required', 'max:5', 'min:1'],
-        'message' => ['required', 'string'],
+        'message' => ['string'],
         'space_id' => ['required']
     ]);
     $comment['user_id'] = auth()->user()->id;

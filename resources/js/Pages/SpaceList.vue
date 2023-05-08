@@ -1,9 +1,12 @@
 <script setup>
-import { Link } from '@inertiajs/vue3';
-
+import { Link, usePage } from "@inertiajs/vue3"
+import { ref } from "vue";
 defineProps({
     spaces: Array
 })
+
+const viewDebug = ref(false)
+const page = usePage()
 </script>
 
 <template>
@@ -25,7 +28,10 @@ defineProps({
         </template>
         </div>
     </div>
-    <pre>
-        {{ spaces }}
-    </pre>
+    <template v-if="page.props.auth && page.props.auth.admin">
+        <button class="btn btn-primary" @click="viewDebug = !viewDebug">Debug</button>
+        <pre v-if="viewDebug" class="p-5 bg-black text-color text-white">
+            {{ spaces }}
+        </pre>
+    </template>
 </template>

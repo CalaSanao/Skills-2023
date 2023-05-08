@@ -2,13 +2,14 @@
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
 import { usePage, useForm } from '@inertiajs/vue3'
-import { computed } from "vue";
+import { computed, ref } from "vue";
 const props = defineProps({
     space: Object
 })
 
 const page = usePage()
 const currentUser = computed(() => page.props.auth)
+const viewDebug = ref(false)
 
 const form = useForm({
     valoration: 1,
@@ -163,7 +164,10 @@ const submit = () => {
         </div>
     </div>
 
-    <pre>
+    <template v-if="page.props.auth && page.props.auth.admin">
+        <button class="btn btn-primary" @click="viewDebug = !viewDebug">Debug</button>
+        <pre v-if="viewDebug" class="p-5 bg-black text-color text-white">
             {{ space }}
         </pre>
+    </template>
 </template>
