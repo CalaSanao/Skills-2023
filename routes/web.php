@@ -33,10 +33,10 @@ Route::get('/spaces/{id}', function ($id) {
     return inertia('SpaceDetails', ['space' => $space]);
 });
 
-// Route::get('/spaces/{id}/visits', function ($id) {
-//     $space = Space::with()->find($id);
-//     return inertia('SpaceDetails', ['space' => $space]);
-// });
+Route::get('/spaces/{id}/visits', function ($id) {
+    $space = Space::with(['visits' => ['interest_point' => ['image']]])->find($id);
+    return inertia('SpaceVisits', ['data' => $space]);
+});
 
 
 Route::get('/admin-message', function () {

@@ -13,6 +13,6 @@ class Visit extends Model
 
     public function interest_point(): BelongsTo
     {
-        return $this->belongsTo(InterestPoint::class, 'id', 'interest_point_id');
+        return $this->belongsTo(InterestPoint::class, 'interest_point_id');
     }
 }

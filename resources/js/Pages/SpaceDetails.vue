@@ -1,7 +1,7 @@
 <script setup>
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
-import { usePage, useForm } from '@inertiajs/vue3'
+import { usePage, useForm, Link } from '@inertiajs/vue3'
 import { computed, ref } from "vue";
 const props = defineProps({
     space: Object
@@ -95,7 +95,7 @@ const submit = () => {
                 </span>
                 {{ space.phone }}
             </p>
-            <button class="btn btn-primary btn-lg" type="button">Example button</button>
+            <Link :href="`/spaces/${space.id}/visits`" class="btn btn-primary btn-lg" as="button">Ver Visitas</Link>
         </div>
     </div>
 
