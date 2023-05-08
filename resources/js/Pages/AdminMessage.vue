@@ -20,12 +20,6 @@
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="typeEmailX-2">Nombre</label>
-                                        <input type="text" id="typeEmailX-2"
-                                            class="form-control form-control-lg" required />
-                                    </div>
-
-                                    <div class="form-outline mb-4">
                                         <label class="form-label" for="typeEmailX-2">Asunto</label>
                                         <input type="text" id="typeEmailX-2"
                                             class="form-control form-control-lg" required />
