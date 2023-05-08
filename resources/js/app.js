@@ -24,5 +24,5 @@ createInertiaApp({
         color: 'red',
         showSpinner: true,
     },
-    title: title => 'Mi app'
+    title: title => title ? title+' - ADArt' : 'ADArt'
 })

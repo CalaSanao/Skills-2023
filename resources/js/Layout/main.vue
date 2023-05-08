@@ -64,7 +64,7 @@ const currentUser = computed(() => page.props.auth)
                         </Link>
                     </template>
                     <template v-else>
-                        <Link href='/logout' method="post" class="btn btn-outline-primary my-2 my-sm-0" as="button">
+                        <Link href='/register' class="btn btn-outline-primary my-2 my-sm-0" as="button">
                             Sign-in
                         </Link>
                         <Link href='/login' class="btn btn-outline-success my-2 my-sm-0" as="button">
