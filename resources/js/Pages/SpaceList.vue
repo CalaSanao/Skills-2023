@@ -19,6 +19,10 @@ const page = usePage()
                     <div class="card-body">
                         <h3 class="card-title">{{ space.name }}</h3>
                         <p class="card-text" v-if="space.images.length > 0">{{ space.images[0].name }}</p>
+                        <p class="card-text">Tipo: {{ space.type.name  }}</p>
+                        <p class="card-text">Accesibilidad: {{ space.accessibility  }}</p>
+                        <p class="card-text">Zona: {{ space.zone  }}</p>
+
                         <Link :href="`/spaces/${space.id}`">
                             <button type="button" class="btn btn-primary">Ver</button>
                         </Link>

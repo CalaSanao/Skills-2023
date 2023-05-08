@@ -21,7 +21,7 @@ const page = usePage()
                 relevantes de las Islas Baleares.</p>
         </div>
     </section>
-    <h1 class="my-5">Espais destacats</h1>
+    <h1 class="my-5">Espacios destacados</h1>
     <vueper-slides autoplay progress v-if="spaces">
         <vueper-slide v-for="(slide, i) in spaces" :key="i" :image="slide.images[0].url">
             <template #content>
@@ -42,6 +42,9 @@ const page = usePage()
                     <div class="card-body">
                         <h3 class="card-title">{{ space.name }}</h3>
                         <p class="card-text">{{ space.images[0].name }}</p>
+                        <p class="card-text">Tipo: {{ space.type.name  }}</p>
+                        <p class="card-text">Accesibilidad: {{ space.accessibility  }}</p>
+                        <p class="card-text">Zona: {{ space.zone  }}</p>
                         <Link :href="`/spaces/${space.id}`">
                             <button type="button" class="btn btn-primary">Ver</button>
                         </Link>

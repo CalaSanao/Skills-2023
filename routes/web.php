@@ -19,12 +19,12 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    $spaces = Space::whereHas('images')->with('images')->where('is_featured', true)->get();
+    $spaces = Space::whereHas('images')->with('images','type')->where('is_featured', true)->get();
     return inertia('Index', ['spaces' => $spaces]);
 });
 
 Route::get('/spaces', function () {
-    $spaces = Space::with('images')->get();
+    $spaces = Space::with('images','type')->get();
     return inertia('SpaceList', ['spaces' => $spaces]);
 });
 

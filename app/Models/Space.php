@@ -21,7 +21,7 @@ class Space extends Model
     }
     public function type(): BelongsTo
     {
-        return $this->belongsTo(Types::class, 'city_id');
+        return $this->belongsTo(Types::class, 'type_id');
     }
     public function comments(): HasMany
     {
